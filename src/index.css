@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "LCD";
+  src: url("./fonts/LCD14.otf") format("opentype");
+}
+
+@theme {
+  --font-mono: "LCD";
+}
+
+@layer base {
+  :root {
+    @apply min-h-screen font-sans;
+  }
+
+  body,
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  *,
+  ::before,
+  ::after {
+    animation: none !important;
+  }
+}
