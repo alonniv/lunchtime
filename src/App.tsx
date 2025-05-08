@@ -17,6 +17,12 @@ function getDescription(time: ReturnType<typeof getCurrentTime>) {
   if (time.hours === 11 && time.minutes >= 30) {
     return "It's nearly lunchtime";
   }
+  if (time.hours === 15 && time.minutes <= 30) {
+    return "It's coffee time ☕";
+  }
+  if (time.hours >= 15) {
+    return "Past last coffee, go home"
+  }
   if (time.hours > 12) {
     return "It's past lunchtime";
   }

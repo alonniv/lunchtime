@@ -6,9 +6,8 @@ self.addEventListener("periodicsync", (event) => {
   const key = [date.getFullYear(), date.getMonth(), date.getDate()]
     .map((x) => x.toString())
     .join("-");
-  console.log(key);
   if (checkedFor.has(key)) return;
-  if (date.getHours() === 9) {
+  if (date.getHours() === 12) {
     checkedFor.add(key);
     self.registration.showNotification("Lunchtime!", {
       body: "You should be leaving for lunch by now...",
